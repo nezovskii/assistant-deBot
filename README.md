@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # **Dai - Decentralized AI Chatbot on ICP**
 
 Dai is a decentralized AI chatbot built on the Internet Computer Protocol (ICP). This README provides guidance on setting up and running the application.
@@ -10,20 +8,23 @@ Dai is a decentralized AI chatbot built on the Internet Computer Protocol (ICP).
 
 ### Credentials
 
-Create a **`credential.js`** file in **`/src/dfinity_js_frontend/src/utils`** and set your OpenAI API key as follows:
+Create a **`credential.js`** file in the root directory and set your OpenAI API key as follows:
 
-```js
+```javascript
 export const OPEN_AI_API_KEY = "YOUR_OPEN_AI_API_KEY";
 ```
+
+Note: This file is ignored by default; please ensure it is excluded from version control to prevent accidental exposure of your API key.
 
 After setting up the frontend credentials, ensure that you have the **`dfx`** command-line tool installed on your computer. Check its version with the following command:
 
 ```bash
+
 dfx --version
 
 ```
 
-If you don't have it installed, follow the instructions in the [ICP SDK installation guide](https://internetcomputer.org/docs/current/developer-docs/setup/install#installing-the-ic-sdk-1).
+If you don't have it installed, follow the instructions in the [ICP SDK installation guide](https://internetcomputer.org/docs/current/developer-docs/setup/install#installing-the-ic-sdk-1), making sure to set up version **`0.15.*`**.
 
 For a smooth deployment, follow the [Azle installation documentation](https://demergent-labs.github.io/azle/installation.html#build-dependencies).
 
@@ -33,19 +34,21 @@ To install project dependencies, run the following command:
 
 ```bash
 npm install
+
 ```
 
 ## **Run the App Locally**
 
 Before running the app locally, start the local replica with the following command:
 
-```sh
+```bash
 dfx start --clean
+
 ```
 
 To run the app locally, ensure that **`dfx`** (Internet Computer CDK) is installed and running. Execute the following command in another terminal window without closing the replica:
 
-```sh
+```bash
 dfx deploy
 
 ```
@@ -70,21 +73,23 @@ You can deploy individual parts of the app separately:
 
 - Deploy only the backend:
 
-```sh
+```bash
 dfx deploy dfinity_js_backend
+
 ```
 
 - Deploy only the frontend:
 
-```sh
+```bash
 dfx deploy dfinity_js_frontend
 
 ```
 
 - Test the frontend locally:
 
-```sh
+```bash
 npm start
+
 ```
 
 ## **Troubleshooting**
